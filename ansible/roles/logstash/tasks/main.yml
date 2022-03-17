@@ -28,7 +28,7 @@
   tags: sof-elk_logstash
 
 - name: Set up logstash service
-   shell: /usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
+  shell: /usr/share/logstash/bin/system-install /etc/logstash/startup.options systemd
 
 - name: Get list of all configfiles
   find:
