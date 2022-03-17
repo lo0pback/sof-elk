@@ -5,6 +5,18 @@
     state: present
   tags: sof-elk_elasticsearch
 
+- name: Change /etc/elasticsearch permissions
+  file:
+    path: /etc/elasticsearch
+    owner: elasticsearch
+    group: elasticsearch
+
+- name: Change /var/lib/elasticsearch permissions
+  file:
+    path: /etc/elasticsearch
+    owner: elasticsearch
+    group: elasticsearch
+
 - name: Enable Elasticsearch service
   systemd:
     name: elasticsearch
