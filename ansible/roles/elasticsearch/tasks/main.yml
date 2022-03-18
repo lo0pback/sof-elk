@@ -16,7 +16,7 @@
 # NG
 - name: Change /var/lib/elasticsearch permissions
   file:
-    path: /etc/elasticsearch
+    path: /var/lib/elasticsearch
     owner: elasticsearch
     group: elasticsearch
     recurse: yes
