@@ -10,12 +10,14 @@
     path: /etc/elasticsearch
     owner: elasticsearch
     group: elasticsearch
+    recurse: yes
 
 - name: Change /var/lib/elasticsearch permissions
   file:
     path: /etc/elasticsearch
     owner: elasticsearch
     group: elasticsearch
+    recurse: yes
 
 - name: Enable Elasticsearch service
   systemd:
