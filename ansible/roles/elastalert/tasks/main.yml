@@ -46,8 +46,11 @@
 
 - name: Create Elastalert index
   command: 'elastalert-create-index --host 127.0.0.1 --port 9200 --no-ssl --no-auth --url-prefix "" --index "elastalert_status" --old-index "" --config /etc/sysconfig/elastalert_config.yml'
+  # NG
   retries: 3
   delay: 3
+  register: result
+  until: result.rc == 0
   tags: sof-elk_elastalert
 
 - name: Enable Elastalert service
