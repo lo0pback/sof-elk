@@ -27,6 +27,10 @@
   tags: sof-elk_elastalert
 
 # NG
+- name: systemd daemon-reload
+  action: command systemctl daemon-reload
+
+# NG
 - name: Restart Elasticsearch service in case it stopped
   systemd:
     name: elasticsearch
