@@ -11,7 +11,8 @@ es_vercmp_result=$?
 if [ ${es_vercmp_result} -eq 11 ]; then
     jvm_options_file="/etc/elasticsearch/jvm.options"
 else
-    jvm_options_file="/etc/elasticsearch/jvm.options.d/sof-elk"
+    # NG
+    jvm_options_file="/etc/elasticsearch/jvm.options.d/sof-elk.options"
 fi
 
 ES_HEAP_MAX=31000
