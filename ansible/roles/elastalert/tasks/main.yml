@@ -26,6 +26,13 @@
     state: present
   tags: sof-elk_elastalert
 
+# NG
+- name: Restart Elasticsearch service in case it stopped
+  systemd:
+    name: elasticsearch
+    state: started
+  tags: sof-elk_elastalert
+
 - name: Configure Elastalert
   copy:
     src: 'elastalert_config.yml'
