@@ -30,8 +30,10 @@
   copy:
     src: 'elastalert_config.yml'
     dest: '/etc/sysconfig/elastalert_config.yml'
-    owner: root
-    group: root
+    # NG
+    owner: elasticsearch
+    # NG
+    group: elasticsearch
     mode: 0644
   tags: sof-elk_elastalert
 
