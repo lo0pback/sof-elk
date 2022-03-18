@@ -5,6 +5,7 @@
     state: present
   tags: sof-elk_elasticsearch
 
+# NG
 - name: Change /etc/elasticsearch permissions
   file:
     path: /etc/elasticsearch
@@ -12,6 +13,7 @@
     group: elasticsearch
     recurse: yes
 
+# NG
 - name: Change /var/lib/elasticsearch permissions
   file:
     path: /etc/elasticsearch
