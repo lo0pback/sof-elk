@@ -155,7 +155,8 @@
 
 - name: Check out SOF-ELK repo
   git:
-    repo: 'https://github.com/philhagen/sof-elk'
+    # NG
+    repo: 'https://github.com/lo0pback/sof-elk'
     dest: '/usr/local/sof-elk'
     version: "{{ git_branch }}"
     update: yes
