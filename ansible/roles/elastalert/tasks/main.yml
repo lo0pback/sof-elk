@@ -42,12 +42,17 @@
     mode: 0644
   tags: sof-elk_elastalert
 
+# NG
 - name: Wait for Elastalert config to exist
   wait_for:
     path: /etc/sysconfig/elastalert_config.yml
 
 - name: Create Elastalert index
   command: 'elastalert-create-index --host 127.0.0.1 --port 9200 --no-ssl --no-auth --url-prefix "" --index "elastalert_status" --old-index "" --config /etc/sysconfig/elastalert_config.yml'
+  register: task_result
+  until: task_result.rc == 0
+  retries: 10
+  delay: 2
   tags: sof-elk_elastalert
 
 - name: Enable Elastalert service
