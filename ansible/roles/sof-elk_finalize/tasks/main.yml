@@ -16,3 +16,10 @@
     name: kibana
     state: restarted
   tags: sof-elk_finalize
+  
+  #NG 
+- name: Verify firewalld is started
+  systemd: 
+    name: firewalld
+    state: started
+  tags: sof-elk_finalize
