@@ -52,7 +52,7 @@
   register: task_result
   until: task_result.rc == 0
   retries: 10
-  delay: 2
+  delay: 10
   tags: sof-elk_elastalert
 
 - name: Enable Elastalert service
